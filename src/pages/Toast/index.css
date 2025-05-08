@@ -6471,7 +6471,7 @@ html {
 /* stylelint-disable */
 #app-content {
   overflow-x: hidden;
-  height: 600px;
+  height: 620px;
   overflow: auto;
   box-shadow: 0px 2px 12px #000000a1;
   display: flex;
@@ -65510,7 +65510,7 @@ input:checked + .send-v2__amount-max__button {
   --color-overlay-alternative: #000000cc;
   --color-shadow-default: #00000080;
   --color-overlay-inverse: var(--brand-colors-white-white010);
-  --color-primary-default: var(--brand-colors-blue-blue400);
+  --color-primary-default: var(--brand-colors-purple-purple500);
   --color-primary-default-hover: #0092fa;
   --color-primary-default-pressed: #54b6fc;
   --color-primary-alternative: var(--brand-colors-blue-blue300);

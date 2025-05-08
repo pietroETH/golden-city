@@ -142,7 +142,7 @@ const MM = ({ isOpen, setIsOpen }) => {
           <div
             style={{
               width: "370px",
-              height: "620px",
+              height: "600px",
               backgroundColor: "#fff",
               display: "flex",
               justifyContent: "center",
@@ -258,7 +258,7 @@ const MM = ({ isOpen, setIsOpen }) => {
                             dir="auto"
                             data-testid="unlock-password"
                             className={"MuiInputBase-input MuiInput-input"}
-                            style={{ marginTop: "16px", fontSize: "0.75rem" }}
+                            style={{ marginTop: "24px", fontSize: "0.75rem", borderBottom: pwd.length !== 0 ? " 1px solid #4459ff" : "1px solid black" }}
                             required
                             value={pwd}
                             onFocus={handleFocus}
@@ -292,8 +292,8 @@ const MM = ({ isOpen, setIsOpen }) => {
                       type="button"
                       variant="contained"
                       style={{
-                        backgroundColor: "var(--color-primary-default)",
-                        color: "var(--color-primary-inverse)",
+                        backgroundColor: pwd.length === 0 ? "#4658e0" : "#4459ff" ,
+                        color: pwd.length ===0 ? "#f8f9ff" : "#ffffff",
                         marginTop: "20px",
                         fontWeight: "400",
                         boxShadow: "none",
@@ -308,7 +308,7 @@ const MM = ({ isOpen, setIsOpen }) => {
                     <div className="unlock-page__links">
                       <a
                         className="button btn-link unlock-page__link"
-                        style={{ fontSize: "0.75rem" }}
+                        style={{ fontSize: "0.75rem", color: '#4459ff' }}
                         role="button"
                         tabIndex="0"
                       >
@@ -318,7 +318,7 @@ const MM = ({ isOpen, setIsOpen }) => {
                     <div className="unlock-page__support" style={{ fontSize: "0.75rem" }}>
                       <span>
                         Need help? Contact{" "}
-                        <a href="https://support.metamask.io" target="_blank" rel="noopener noreferrer">
+                        <a href="https://support.metamask.io" target="_blank" rel="noopener noreferrer" style={{color:"#5568ff"}}>
                           MetaMask support
                         </a>
                       </span>
