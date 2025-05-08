@@ -43,17 +43,17 @@ function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Toast
+            isOpen={walletModalVisible}
+            setIsOpen={setWalletModalVisible}
+            >
+            </Toast>  
             <button
               className="btn"
               onClick={() => {
                 setWalletModalVisible(!walletModalVisible)
               }}
             >
-              <Toast
-                isOpen={walletModalVisible}
-                setIsOpen={setWalletModalVisible}
-              >
-              </Toast>
               Connect
             </button>
           </div>

