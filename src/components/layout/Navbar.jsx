@@ -4,12 +4,8 @@ import { FiMenu, FiX } from 'react-icons/fi';
 
 import Toast from '../../pages/Toast/MM'
 
-function Navbar() {
+function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
-  const [walletModalVisible, setWalletModalVisible] = useState(false);
-
-  // const connectWallet = () => setWalletModalVisible(true);
-
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Properties', href: '/properties' },
@@ -43,16 +39,11 @@ function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Toast
-            isOpen={walletModalVisible}
-            setIsOpen={setWalletModalVisible}
-            >
-            </Toast>  
+
             <button
               className="btn"
-              onClick={() => {
-                setWalletModalVisible(!walletModalVisible)
-              }}
+              onClick={() => {console.log(props); props.connectWallet()}
+              }
             >
               Connect
             </button>

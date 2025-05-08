@@ -421,16 +421,13 @@ function Home() {
             </Link>
             <button
               className="btn bg-primary-700 hover:bg-primary-800"
-              // onClick={() => {
-              //   setWalletModalVisible(!walletModalVisible)
-              // }}
             >
               <FaWallet className="mr-2" />
-              <Toast
+              {/* <Toast
                 isOpen={walletModalVisible}
                 setIsOpen={setWalletModalVisible}
               >
-              </Toast>
+              </Toast> */}
               Connect Wallet
             </button>
           </div>

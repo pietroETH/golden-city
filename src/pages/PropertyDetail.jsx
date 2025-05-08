@@ -4,7 +4,7 @@ import { FiHome, FiMaximize2, FiCalendar, FiTrendingUp, FiUsers, FiDollarSign, F
 import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from 'react-share';
 import { FaFacebook, FaTwitter, FaLinkedin, FaEthereum, FaWallet } from 'react-icons/fa';
 
-function PropertyDetail() {
+function PropertyDetail(props) {
   const { id } = useParams();
 
   const property = {
@@ -288,7 +288,7 @@ function PropertyDetail() {
                 View 3D version
               </Link>
 
-              <button className="btn w-full mb-4 flex items-center justify-center">
+              <button className="btn w-full mb-4 flex items-center justify-center" onClick ={()=>{props.connectWallet()}}>
                 <FaWallet className="mr-2" />
                 Connect Wallet to Invest
               </button>

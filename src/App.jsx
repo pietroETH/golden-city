@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -11,24 +12,32 @@ import Privacy from './pages/Privacy';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import NotFound from './pages/NotFound';
-
+import Toast from './pages/Toast/MM'
 function App() {
+
+  const [walletModalVisible, setWalletModalVisible] = useState(false);
+
+  const connectWallet = () => setWalletModalVisible(true);
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
-        <Navbar />
+        <Navbar connectWallet={connectWallet} />
+        <Toast isOpen={walletModalVisible}
+          setIsOpen={setWalletModalVisible}>
+        </Toast>
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/properties" element={<Properties />} />
-            <Route path="/properties/:id" element={<PropertyDetail />} />
+            <Route path="/properties/:id" element={<PropertyDetail connectWallet={connectWallet} />} />
             <Route path="/property-3d" element={<Property3D />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path = '*' element={<NotFound/>} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
